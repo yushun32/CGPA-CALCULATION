@@ -1,0 +1,242 @@
+<!--
+BCS2243 WEB ENGINEERING [HOT]
+Student ID: CA20123
+Student Name: LIM YU SHUN
+Section: 2B
+Lecturer name: DR NOORLIN
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="author" content="LIM YU SHUN CA20123">
+<title>CGPA CALCULATION 2023</title>
+<!--Document information created by LIM YU SHUN CA20123>
+
+<!--Create a CSS External Style Sheet & link a .css on another folder -->
+<link rel="stylesheet" type="text/css" href="./Styles/cgpa.css">
+
+<!--Create a javascript & link a .js on another folder -->
+<script src="./Functions/cgpa.js"></script>
+
+</head>
+<body>
+
+<div class="header">
+<a href="https://www.ump.edu.my/en" target="_blank">
+  <div class="bannerimg" style="height:150px;">
+  </div>
+	</a>
+</div>
+
+<div class="navbar_mid">
+  <a href="Views/aboutCGPA.html" target="_blank">ABOUT GPA/CGPA</a>
+</div>
+
+<div class="row">
+  <div class="main">
+    <h2>UMP STUDENT RESULT</h2>
+    <p>The student courses and result:</p>
+   
+	<br>
+        <form name="cpgaForm" onsubmit="return false">
+		<div class="container1">
+			<div class ="row">
+			
+			<table border="0" align="left">
+				
+					<tr>
+						<th>SEMESTER</th>
+						<td><input type="text" id="smt" name="smt" placeholder="I 2023/2024"></td>
+					</tr>
+					<tr>
+						<th>STUDENT ID</th>
+						<td><input type="text" id="stdID" name="stdID" placeholder="CA20000"></td>
+					</tr>
+					<tr>
+						<th>STUDENT NAME</th>
+						<td><input type="text" id="stdName" name="stdName" placeholder="Abu Bakar bin Ahmad"></td>
+					</tr>
+			
+			</table>
+			</div>
+		</div>
+		<div class="container1">
+			<div class ="row">
+				<table border="1" align="left">
+				
+					<tr>
+						<td rowspan="7" style="text-align: center;">SEMESTER I</td>
+						<th>COURSE CODE</th>
+						<th>COURSE NAME</th>
+						<th>CREDIT</th>
+						<th>GRADE</th>
+						<th>GRADE VALUE</th>
+						<th>GRADE VALUE * CREDIT</th>
+					</tr>
+					
+					<tr>
+						<td>
+							<select id="crsCode1" name="courseCode1" required onchange="displayCourseName()">
+								<option value="" disabled selected>Select course code</option>
+								<option value="SOFTWARE ENGINEERING">BCS1033</option>
+								<option value="PROBLEM SOLVING">BCI1143</option>
+								<option value="COMPUTER ARCHITECTURE">BCN1043</option>
+								<option value="DISCRETE MATHEMATICS">BUM1233</option>
+							</select>
+						</td>
+						<td><label><input type="text" id="crsName1" name="courseName1" readonly></label></td>
+						<td><label><input type="text" id ="cre1" name="credit1" required></label></td>
+						<td>
+							<select id="grd1" name="grade1" onchange="displayGradeCredit()">
+								<option value="" disabled selected>Select grade</option>
+								<option value="4">A</option>
+								<option value="3">B</option>
+								<option value="2">C</option>
+								<option value="1">D</option>
+								<option value="0.67">E</option>
+							</select>
+						</td>
+						<td><label id="grdValue1" name="gradeValue1" readonly></label></td>
+						<td><label id="grdValueCredit1" name="gradeValueCredit1" readonly></label></td>
+					</tr>
+					
+						<tr>
+						<td>
+							<select id="crsCode2" name="courseCode2" required onchange="displayCourseName()">
+								<option value="" disabled selected>Select course code</option>
+								<option value="SOFTWARE ENGINEERING">BCS1033</option>
+								<option value="PROBLEM SOLVING">BCI1143</option>
+								<option value="COMPUTER ARCHITECTURE">BCN1043</option>
+								<option value="DISCRETE MATHEMATICS">BUM1233</option>
+							</select>
+						</td>
+						<td><label><input type="text" id="crsName2" name="courseName2" readonly></label></td>
+						<td><label><input type="text" id ="cre2" name="credit2" required></label></td>
+						<td>
+							<select id="grd2" name="grade2" onchange="displayGradeValue(); displayGradeCredit()">
+								<option value="" disabled selected>Select grade</option>
+								<option value="4">A</option>
+								<option value="3">B</option>
+								<option value="2">C</option>
+								<option value="1">D</option>
+								<option value="0.67">E</option>
+							</select>
+						</td>
+						<td><label id="grdValue2" name="gradeValue2" readonly></label></td>
+						<td><label id="grdValueCredit2" name="gradeValueCredit2" readonly></label></td>
+					</tr>
+					
+						<tr>
+						<td>
+							<select id="crsCode3" name="courseCode3" required onchange="displayCourseName()">
+								<option value="" disabled selected>Select course code</option>
+								<option value="SOFTWARE ENGINEERING">BCS1033</option>
+								<option value="PROBLEM SOLVING">BCI1143</option>
+								<option value="COMPUTER ARCHITECTURE">BCN1043</option>
+								<option value="DISCRETE MATHEMATICS">BUM1233</option>
+							</select>
+						</td>
+						<td><label><input type="text" id="crsName3" name="courseName3" readonly></label></td>
+						<td><label><input type="text" id ="cre3" name="credit3" required></label></td>
+						<td>
+							<select id="grd3" name="grade3" onchange="displayGradeValue(); displayGradeCredit()">
+								<option value="" disabled selected>Select grade</option>
+								<option value="4">A</option>
+								<option value="3">B</option>
+								<option value="2">C</option>
+								<option value="1">D</option>
+								<option value="0.67">E</option>
+							</select>
+						</td>
+						<td><label id="grdValue3" name="gradeValue3" readonly></label></td>
+						<td><label id="grdValueCredit3" name="gradeValueCredit3" readonly></label></td>
+					</tr>
+					
+						<tr>
+						<td>
+							<select id="crsCode4" name="courseCode4" required onchange="displayCourseName()">
+								<option value="" disabled selected>Select course code</option>
+								<option value="SOFTWARE ENGINEERING">BCS1033</option>
+								<option value="PROBLEM SOLVING">BCI1143</option>
+								<option value="CONPUTER ARCHITECTURE">BCN1043</option>
+								<option value="DISCRETE MATHEMATICS">BUM1233</option>
+							</select>
+						</td>
+						<td><label><input type="text" id="crsName4" name="courseName4" readonly></label></td>
+						<td><label><input type="text" id ="cre4" name="credit4" required></label></td>
+						<td>
+							<select id="grd4" name="grade4" onchange="displayGradeValue(); displayGradeCredit()">
+								<option value="" disabled selected>Select grade</option>
+								<option value="4">A</option>
+								<option value="3">B</option>
+								<option value="2">C</option>
+								<option value="1">D</option>
+								<option value="0.67">E</option>
+							</select>
+						</td>
+						<td><label id="grdValue4" name="gradeValue4" readonly></label></td>
+						<td><label id="grdValueCredit4" name="gradeValueCredit4" readonly></label></td>
+					</tr>
+					
+					
+					
+					
+					
+					<tr>
+						<td colspan="2" style="text-align:right;font-weight:bold;font-style:italic">Total</td>
+						<td><label><p id="ttlCredit" name="totalCredit"></p></label></td>
+						<td></td>
+						<td></td>
+						<td><label><p id="ttlGradeValueCredit" name="totalGradeValueCredit"></p></label></td>
+					</tr>
+					
+					<tr>
+						<td colspan="2" style="text-align:right;font-weight:bold;font-style:italic">GPA</td>
+						<td><label id="gpaValue" name="gpaValue"></label></td>
+						<td colspan="2" style="text-align:right;font-weight:bold;font-style:italic">CGPA</td>
+						<td><label id="cgpaValue" name="cgpaValue"></label></td>
+					</tr>
+					
+				</table>
+				
+				<div class="col-calc">
+					<input type="submit"  id="submit" value="CALCULATE" onclick="displayCalculationOutput()">
+				</div>
+				
+				<div class="col-reset">
+					<input type="reset"  id="reset" value="RESET">
+				</div>
+			
+			
+			</div>
+			
+		</div>
+		
+		<div class="container1" id="output"></div>
+			
+		
+			
+		</form>
+		</div>
+	</div>
+	</div>
+</div>
+
+<footer>
+<div class="footer">
+	<div class="navbar_footer">
+		<h5>Copyright &copy2023 Official Portal - University Malaysia Pahang &#183 All rights reserved.</h5>
+	</div>
+</div>
+</footer>
+
+</body>
+</html>
+
+    
+   
+    
+    

@@ -1,0 +1,372 @@
+/*
+BCS2243 WEB ENGINEERING [HOT]
+Student ID: CA20123
+Student Name: LIM YU SHUN
+Section: 2B
+Lecturer name: DR NOORLIN
+*/
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Style the body */
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  /* Header/logo Title */
+  .header {
+    padding: 1px;
+    text-align: center;
+    /* background: #060606; */
+    color: white;
+  }
+  
+  /* Increase the font size of the heading */
+  .header h1 {
+    font-size: 40px;
+  }
+  
+  .navbar_footer {
+    overflow: hidden;
+    background-color: #003399;
+    position: sticky;
+    /* top: 0; */
+	height: 30px;
+  }
+  
+  /* Style the navigation bar links */
+  .navbar_mid a {
+    float: right;
+    display: block;
+    color: black;
+	font-weight: bold;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  /* Style the container */
+  .container {
+    border-radius: 10px;
+    background-color: #ffa500;
+    padding: 10px;
+    }
+	
+	/* Style the container */
+  .container1 {
+    border-radius: 10px;
+	border-style: solid;
+	border-width: thin;
+    border-color: black; 
+    padding: 10px;
+	border-color: #ffa500;
+    }
+  
+  /* Setting row */
+  .row {  
+    /*display: -ms-flexbox; /* IE10 */
+    /*display: flex;*/
+    -ms-flex-wrap: wrap; /* IE10 */
+    /*flex-wrap: wrap;*/
+    width: 100%;
+  }
+  
+    /* Setting row title */
+    .row_title {  
+        /*display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+        background-color: #66CDAA;
+        color: white;
+        text-align: center;
+        
+      }
+    
+    .row_title2 {  
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+        background-color:  #f0d803e1;
+        color: black;
+        text-align: center;
+        
+      }
+	  
+	  /* Setting row B */
+    .row_B {  
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+        background-color: #FFFFFF;
+        color: black;
+        text-align: center;
+        
+      }
+      
+  /* Create two unequal columns that sits next to each other */
+  /* Main column */
+  .main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    /*background-color: #fff77a;*/
+    padding: 20px;
+  }
+  
+  /* Fake image, just for this example */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* UMPSA Logo */
+  .bannerimg {
+    content: url("../Results/LogoUMP.png");
+	margin-left: auto;
+	margin-right: auto;
+    width: 15%;
+}
+    
+  /* Footer */
+  .footer {
+    /* padding: 5px; */
+    background: #003399;
+	height: 5px;
+	color: white;
+  }
+  
+  /* Increase the font size of the footer */
+  .footer h5 {
+    font-size: 10px;
+    color :white;
+    text-align: right;
+  }
+  
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .row {   
+      flex-direction: column;
+
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .navbar_mid a {
+      float: none;
+      width: 100%;
+    }
+  }
+  
+  /* for css */
+  /* Style inputs, select elements and textareas */
+  input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  /* Style inputs, select elements and textareas */
+  input[type=number], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    color: #060606;
+  }
+  
+
+  /* Style the label to display next to the inputs */
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    background-color: #003399;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  /* Style the reset button */
+  input[type=reset] {
+     background-color: #003399;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+  }
+   
+    
+  /* Floating column for inputs: 75% width */
+  .col-calc {
+    padding: 20px;
+    float: left;
+    width: 50%;
+	margin-top: 6px;
+  }
+  /* Floating column for inputs: 75% width */
+  .col-reset {
+    padding: 20px;
+    float: right;
+    width: 50%;
+    margin-top: 6px;
+  }
+  
+  /* Floating column for inputs: 75% width */
+  .col-resultlabel {
+  
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+  }
+  /* Floating column for inputs: 75% width */
+  .col-resultnumber {
+  
+    float: right;
+    width: 50%;
+    margin-top: 6px;
+  }
+  /* Floating column for inputs: 75% width */
+  .col-row-title {
+     float: left;
+    width: 20%;
+    margin-top: 1px;
+    padding: 1px;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+  .col-row-title2 {
+    float: left;
+    margin-top: 1px;
+    padding: 1px;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+  /* Floating column for inputs: 75% width */
+  .column1 {
+  
+    float: left;
+    width: 20%;
+    margin-top: 1px;
+	border: 1px solid black;
+    border-radius: 4px;
+    padding: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+  /* Floating column for inputs: 75% width */
+  .column2 {
+  
+    float: right;
+    margin-top: 1px;
+    padding: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  /* Floating column for inputs: 75% width */
+  .column3 {
+  
+    float: left;
+    width: 25%;
+    margin-top: 1px;
+    padding: 1px;
+    border: 1px solid #66CDAA;
+    border-radius: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15PX;
+    padding-bottom: 15px;
+  }
+  
+    /* Floating column for inputs: 75% width */
+    .column_B {
+  
+        float: right;
+        width:100%;
+        margin-top: 1px;
+        padding:1px;
+        border: 1px solid #D4AC0D;
+
+
+      }
+	  .col_A {
+		float: right;
+		width: 5%;
+		padding: 1px;
+        border: 1px solid;
+      }
+	  /* .row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+	  .col_C {
+  
+        float: left;
+        width:20%;
+        margin-top: 1px;
+        padding:1px;
+        border: 1px solid #D4AC0D;
+
+
+      }
+  
+  /* Clear floats after the columns */
+  .row:after {
+   content: "";
+   display: table;
+   clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  
+  /* Style the container */
+  .container_below {
+    border-radius: 5px;
+    background-color: #e5fbf0;
+    padding: 20px;
+  }
+  
+
+  
+
+  
+  
